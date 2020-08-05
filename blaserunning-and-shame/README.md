@@ -46,6 +46,7 @@ Under "Enhanced Shame", 76 games (7.8%) resulted in shame; 25 games that origina
 Out of the 25 affected games, 13 results in a new team winning. Of those, seven occurred in the latter half of Season 2 (where data is available).
 After retabulating Season 2 results with these changes (see Table 2), we find that the Breckenridge Jazz Hands would have been awarded the third seed in the Evil League instead of the Canada Moist Talkers.
 This change is likely moot, as both ultimately faced the Philly Pies in the playoffs and lost.
+This retabulation however does *not* take into account games that originally ended in shame and still ended in shame, or games that originally did not end in shame and still did not end in shame, where the result was reversed by the decree.
 
 **Table 2 data in table2.csv**
 
@@ -57,3 +58,9 @@ SIBR does not endorse voting for or against specific decrees, as that is up to t
 [3]: Some data from Season 3 was lost due to siestas, blasphemy, and so, so many birds.
 
 [4]: The commissioner is doing a great job.
+
+## Future work
+
+Future work could identify changes with the combination of Enhanced Shame, a [Season 2 decree](https://blaseball.fandom.com/wiki/Season_2#Decrees) that did not pass, with Blaserunning.
+
+Researchers may also wish to perform a superior retabulation of the Season 2 standings with the Blaserunning rule applied to the latter half of the season for which we have data.
