@@ -11,46 +11,49 @@ We apply this rule to past games and find a 21.6% decrease in games where the aw
 
 ## Shame and Blaserunning
 
-In [blaseball](https://blaseball.com), the *shame phase* was the first major difference between its ruleset and baseball's.
-The [Blaseball Official Rulebook](https://blaseball.com/thebook) (It is Forbidden) defines it:
+In [blaseball](https://blaseball.com), the *shame phase* was the first major difference between its ruleset and that of reality league baseball.
+The [Blaseball Official Rulebook](https://blaseball.com/thebook)[1] defines it:
 
 > Shame Phase: If the home team scores the winning run in the bottom of the final inning, the away team must complete the game in shame, despite being mathematically eliminated.
 
-For example, if the Magic is playing at the Tacos, and the score is tied entering the bottom of the 9th inning, the Tacos can win the game by scoring a run, thus shaming the Magic.
-This is different from baseball, where scoring a run results in a walk-off win; instead, the game finishes when three outs are earned.
+For example, if the Magic is playing at the Tacos and the score is tied entering the bottom of the 9th inning, the Tacos can win the game by scoring a run, thus shaming the Magic.
+This is different from reality league baseball, where scoring a run results in a walk-off win; instead, the game finishes when three outs are earned.
 
 ILB voters may vote for "Blaserunning" in the Season 3 election, described simply as "Stolen Bases are worth 0.1 Runs".
-There is some margin for misunderstanding here: will the scoreboard¹ actually show decimal values for runs? Or does an extra integer run get added when a team reaches 10 steals?
-However, we choose to interpret this proposed rule as introducing fractional runs to the league.
+There is some margin for misunderstanding here: will the scoreboard[2] actually show decimal values for runs? Or does an extra integer run get added when a team reaches 10 steals? For this analysis, we choose to interpret this proposed rule as introducing fractional runs to the league.
 
-In order to help determine the impact of "excitement" this proposed rule change introduces to the league, we analyze its impact on shame.
+In order to help determine the impact of "excitement" that this proposed rule change introduces to the league, we analyze its impact on shame.
 Shame is a uniquely exciting part of blaseball's rules: #watchparty on the official Discord becomes extremely active when a team is shamed.
 
-¹: This research does not discuss implications for stadium scoreboard operators.
+[1]: It is Forbidden.
+
+[2]: This research does not discuss implications for stadium scoreboard operators.
 
 ## Methodology and results
 
 Our sample consists of 982 game logs where the last out is present.
-Logs start in the middle of Season 2, and a number of games have incomplete logs due to various issues.
+Logs start in the middle of Season 2, and a number of games have incomplete logs due to various issues.[3]
 
-On that sample, we looked for stolen bases, re-scored games, and determined whether those games ended in shame.
-The code for this research can be found in [shame.py](./shame.py), and source data can be found in `blaseball-archive-iliana.s3.us-west-2.amazonaws.com` (accessible via an S3 client; log timestamps 1596003134151 through 1596605456865).
+In the sample, we searched for stolen bases and re-scored games, then determine whether those games ended in shame.
+The code for this research can be found in [shame.py](./shame.py), and source data can be found in 
+`blaseball-archive-iliana.s3.us-west-2.amazonaws.com` (accessible via an S3 client; log timestamps 1596003134151 through 1596605456865).
 
 In this sample, 97 games (9.9%) resulted in shame under their original rule sets.
-Under new rules, 76 games (7.8%) resulted in shame; 25 games that originally resulted in shame no longer did, and 4 games now ended in shame that originally did not.
-The re-scored games are in Table 1.
+Under "Enhanced Shame", 76 games (7.8%) resulted in shame; 25 games that originally resulted in shame no longer did so; and 4 games ended in shame that originally did not. Refer to Table 1 for the re-scored games.
 
 **Table 1 data in table1.csv**
 
-Out of the 25 affected games, 13 resulted in a new team winning, with 7 of those in the latter half of Season 2 where data is available.
-Retabulating Season 2 results with these changes (see Table 2), the Breckenridge Jazz Hands would have been awarded the third seed in the Evil League instead of the Canada Moist Talkers.
-This change is likely moot, as both already faced the Philly Pies in the playoffs and lost.
+Out of the 25 affected games, 13 results in a new team winning. Of those, seven occurred in the latter half of Season 2 (where data is available)
+After retabulating Season 2 results with these changes (see Table 2), we find that the Breckenridge Jazz Hands would have been awarded the third seed in the Evil League instead of the Canada Moist Talkers.
+This change is likely moot, as both ultimately faced the Philly Pies in the playoffs and lost.
 
 **Table 2 data in table2.csv**
 
 ## Analysis
 
 The shame phase is popular among ILB viewers, and the proposed Blaserunning decree reduces the number of games resulting in shame in our sample by 21.6%.
-SIBR does not endorse voting for or against specific decrees, as that is up to the individual votes -- but we find its proposed value to add excitement to games misguided².
+SIBR does not endorse voting for or against specific decrees, as that is up to the individual votes — but it is the opinion of the authors that its intended purpose to add excitement to games may be misguided[4].
 
-²: The commissioner is doing a great job.
+[3]: Some data from Season 3 was lost due to siestas, blasphemy, and so, so many birds.
+
+[4] : The commissioner is doing a great job.
