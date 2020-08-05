@@ -43,7 +43,7 @@ Under "Enhanced Shame", 76 games (7.8%) resulted in shame; 25 games that origina
 
 **Table 1 data in table1.csv**
 
-Out of the 25 affected games, 13 results in a new team winning. Of those, seven occurred in the latter half of Season 2 (where data is available)
+Out of the 25 affected games, 13 results in a new team winning. Of those, seven occurred in the latter half of Season 2 (where data is available).
 After retabulating Season 2 results with these changes (see Table 2), we find that the Breckenridge Jazz Hands would have been awarded the third seed in the Evil League instead of the Canada Moist Talkers.
 This change is likely moot, as both ultimately faced the Philly Pies in the playoffs and lost.
 
@@ -56,4 +56,4 @@ SIBR does not endorse voting for or against specific decrees, as that is up to t
 
 [3]: Some data from Season 3 was lost due to siestas, blasphemy, and so, so many birds.
 
-[4] : The commissioner is doing a great job.
+[4]: The commissioner is doing a great job.
