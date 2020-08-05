@@ -30,15 +30,27 @@ Shame is a uniquely exciting part of blaseball's rules: #watchparty on the offic
 
 ## Methodology and results
 
-Over a sample of 982 game logs, we looked for stolen bases, re-scored games, and determined whether those games ended in shame.
+Our sample consists of 982 game logs where the last out is present.
+Logs start in the middle of Season 2, and a number of games have incomplete logs due to various issues.
+
+On that sample, we looked for stolen bases, re-scored games, and determined whether those games ended in shame.
 The code for this research can be found in [shame.py](./shame.py), and source data can be found in `blaseball-archive-iliana.s3.us-west-2.amazonaws.com` (accessible via an S3 client; log timestamps 1596003134151 through 1596605456865).
 
 In this sample, 97 games (9.9%) resulted in shame under their original rule sets.
-Under new rules, 76 games (7.8%) resulted in shame; 29 games that originally resulted in shame no longer did, and 8 games now ended in shame that originally did not.
+Under new rules, 76 games (7.8%) resulted in shame; 25 games that originally resulted in shame no longer did, and 4 games now ended in shame that originally did not.
+The re-scored games are in Table 1.
 
-<!-- Possible TODO: Determine which teams were favored under this rule -->
+**Table 1 data in table1.csv**
+
+Out of the 25 affected games, 13 resulted in a new team winning, with 7 of those in the latter half of Season 2 where data is available.
+Retabulating Season 2 results with these changes (see Table 2), the Breckenridge Jazz Hands would have been awarded the third seed in the Evil League instead of the Canada Moist Talkers.
+This change is likely moot, as both already faced the Philly Pies in the playoffs and lost.
+
+**Table 2 data in table2.csv**
 
 ## Analysis
 
 The shame phase is popular among ILB viewers, and the proposed Blaserunning decree reduces the number of games resulting in shame in our sample by 21.6%.
-SIBR does not endorse voting for or against specific decrees, as that is up to the individual votes -- but we find its proposed value to add excitement to games misguided.
+SIBR does not endorse voting for or against specific decrees, as that is up to the individual votes -- but we find its proposed value to add excitement to games misguided².
+
+²: The commissioner is doing a great job.

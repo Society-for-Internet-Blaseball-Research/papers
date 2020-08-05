@@ -19,6 +19,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+import csv
 import gzip
 import json
 import sys
@@ -31,6 +32,9 @@ NEW_RULES_COMPLETED = []
 
 SHAMED = []
 NEW_RULES_SHAMED = []
+
+END = {}
+NEW_RULES_END = {}
 
 
 def is_game_over(away, home, inning, top):
@@ -98,6 +102,12 @@ def process_game_event(game):
             entry["last"]["topOfInning"],
         ):
             COMPLETED.append(game["_id"])
+            END[game["_id"]] = (
+                game["awayScore"],
+                game["homeScore"],
+                entry["last"]["inning"],
+                entry["last"]["topOfInning"],
+            )
             if is_shame(
                 game["awayScore"],
                 game["homeScore"],
@@ -119,6 +129,12 @@ def process_game_event(game):
             and game["_id"] not in NEW_RULES_COMPLETED
         ):
             NEW_RULES_COMPLETED.append(game["_id"])
+            NEW_RULES_END[game["_id"]] = (
+                game["awayScore"] + (entry["awaySteals"] * 0.1),
+                game["homeScore"] + (entry["homeSteals"] * 0.1),
+                entry["last"]["inning"],
+                entry["last"]["topOfInning"],
+            )
             if is_shame(
                 game["awayScore"] + (entry["awaySteals"] * 0.1),
                 game["homeScore"] + (entry["homeSteals"] * 0.1),
@@ -141,3 +157,57 @@ if __name__ == "__main__":
     print(f"games tabulated: {len(COMPLETED)}")
     print(f"games with shame (original rules): {len(SHAMED)}")
     print(f"games with shame (blaserunning rules): {len(NEW_RULES_SHAMED)}")
+
+    report = []
+
+    i = 0
+    for id in SHAMED:
+        if id not in NEW_RULES_SHAMED:
+            i += 1
+            report.append(id)
+    print(f"games going from shame to not shame: {i}")
+
+    i = 0
+    for id in NEW_RULES_SHAMED:
+        if id not in SHAMED:
+            i += 1
+            report.append(id)
+    print(f"games going from not shame to shame: {i}")
+
+    def top_word(top):
+        return "Top" if top else "Bot"
+
+    rows = []
+    for id in report:
+        entry = GAMES[id]
+        last = entry["last"]
+        (away, home, inning, top) = END[id]
+        (away_new, home_new, inning_new, top_new) = NEW_RULES_END[id]
+        rows.append(
+            {
+                "Season": last["season"] + 1,
+                "Day": last["day"] + 1,
+                "Away": last["awayTeamNickname"],
+                "Home": last["homeTeamNickname"],
+                "Inning Orig": f"{top_word(top)} {inning + 1}",
+                "Away Orig": float(away),
+                "Home Orig": float(home),
+                "Shame Orig": is_shame(away, home, inning, top),
+                "Inning New": f"{top_word(top_new)} {inning_new + 1}",
+                "Away New": away_new,
+                "Home New": home_new,
+                "Shame New": is_shame(away_new, home_new, inning_new, top_new),
+                "Result Flipped": (
+                    (away > home and away_new < home_new)
+                    or (away < home and away_new > home_new)
+                ),
+            }
+        )
+
+    rows = sorted(rows, key=lambda row: row["Day"])
+    rows = sorted(rows, key=lambda row: row["Season"])
+
+    writer = csv.DictWriter(sys.stdout, rows[0].keys())
+    writer.writeheader()
+    for row in rows:
+        writer.writerow(row)
