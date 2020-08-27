@@ -6,3 +6,5 @@
 
 [Wasted Potential: Optimizing team rosters by
 maximizing star ratings](./Wasted_Potential_blaseball.pdf)
+
+[The Fourth Strike: Red Hot or Red Herring?](./Fourth_Strike.pdf)
