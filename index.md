@@ -8,3 +8,6 @@
 maximizing star ratings](./Wasted_Potential_blaseball.pdf)
 
 [The Fourth Strike: Red Hot or Red Herring?](./Fourth_Strike.pdf)
+
+[Understanding Replacement and Incineration in
+ Blaseball via Permutation Tests](./Incineration_Replacement_Permutation_Paper___Final_Draft.pdf)
