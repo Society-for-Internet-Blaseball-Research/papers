@@ -12,4 +12,6 @@ maximizing star ratings](./Wasted_Potential_blaseball.pdf)
 [Understanding Replacement and Incineration in
  Blaseball via Permutation Tests](./Incineration_Replacement_Permutation_Paper___Final_Draft.pdf)
  
- [Effect of the "Double Jumps" decree on playoff seeding](./SIBR_Double_Jump_paper.pdf)
+[Effect of the "Double Jumps" decree on playoff seeding](./SIBR_Double_Jump_paper.pdf)
+
+[Mutually Arising: Improving accessibility in Discord team role color contrast](./Improving_Accessibility__Contrast_in_Discord_Team_Roles_1.2.pdf)
