@@ -16,6 +16,6 @@ maximizing star ratings](./Wasted_Potential_blaseball.pdf)
 
 [Mutually Arising: Improving accessibility in Discord team role color contrast](./Improving_Accessibility__Contrast_in_Discord_Team_Roles_1.2.pdf)
 
-[Blaseball Is a Mess, Fair Play Is the Future: Ananalysis of odds, outcomes, and accuracy in thePeace and Prosperity Era](./Fair_Play_is_the_Future.pdf)
+[Blaseball Is a Mess, Fair Play Is the Future: An analysis of odds, outcomes, and accuracy in the Peace and Prosperity Era](./Fair_Play_is_the_Future.pdf)
 
 [A sinking feeling: Investigating the relationship between team eDensity and Level](./SIBR_eDensity2.pdf)
