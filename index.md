@@ -1,4 +1,7 @@
-## SIBR Papers
+---
+title: SIBR Papers
+layout: fullpath
+---
 
 [Effects of "Blaserunning" decree on shame](./blase-running-shame.pdf)
 
