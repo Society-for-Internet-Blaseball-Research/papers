@@ -1,1 +1,4 @@
-theme: sibr-jekyll-theme
+plugins:
+  - jekyll-remote-theme
+    
+remote_theme: Society-for-Internet-Blaseball-Research/sibr-jekyll-theme
