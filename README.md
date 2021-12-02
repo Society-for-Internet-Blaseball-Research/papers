@@ -1,0 +1,1 @@
+This repository has been deprecated. New papers are to be added to the sibr.dev repository in the `_papers` directory: https://github.com/Society-for-Internet-Blaseball-Research/sibr.dev/tree/main/_papers
